@@ -127,7 +127,7 @@
         /* 사이드바 네비게이션 */
         .content-wrapper {
             display: grid;
-            grid-template-columns: 250px 1fr;
+            grid-template-columns: 280px 1fr;
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -140,6 +140,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             position: sticky;
             top: 80px;
+            z-index: 10;
         }
 
         .sidebar h3 {
@@ -189,9 +190,21 @@
             padding: 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             display: none;
+            min-height: 600px;
+            overflow: visible;
         }
 
         .main-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .lesson-content {
+            display: none;
+            width: 100%;
+        }
+
+        .lesson-content.active {
             display: block;
             animation: fadeIn 0.3s ease-in;
         }
@@ -437,6 +450,7 @@
 
             .sidebar {
                 position: static;
+                margin-bottom: 1rem;
             }
 
             .hero h1 {
@@ -449,6 +463,10 @@
 
             nav {
                 gap: 1rem;
+            }
+
+            .lesson-content {
+                padding: 0;
             }
         }
 
