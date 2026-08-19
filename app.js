@@ -747,11 +747,11 @@
     toastContainer.appendChild(toast);
 
     setTimeout(() => {
-      toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      toast.style.transition = 'opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
       toast.style.opacity = '0';
-      toast.style.transform = 'translateY(10px)';
-      setTimeout(() => toast.remove(), 300);
-    }, 2800);
+      toast.style.transform = 'translateY(12px) scale(0.95)';
+      setTimeout(() => toast.remove(), 320);
+    }, 2600);
   }
 
   function copyToClipboard(text, successMsg) {
