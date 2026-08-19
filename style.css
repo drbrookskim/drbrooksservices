@@ -573,31 +573,84 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   box-shadow: var(--shadow-card);
   position: relative;
   overflow: hidden;
-  transition: transform var(--spring-snappy), box-shadow var(--spring-snappy), background-color var(--spring-snappy), border-color var(--spring-snappy);
+  cursor: pointer;
+  transition: transform var(--spring-snappy), box-shadow var(--spring-snappy), background var(--spring-snappy), border-color var(--spring-snappy);
 }
 
-/* Top light catching edge (§12) */
-.showcase-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--card-gradient, linear-gradient(135deg, #0071e3, #af52de));
-  opacity: 0.9;
-  transition: height var(--spring-snappy);
+/* Hover & Selected State: Whole card smoothly becomes the service gradient */
+.showcase-card:hover,
+.showcase-card.is-selected {
+  transform: translateY(-5px) scale(1.01);
+  background: var(--card-gradient, linear-gradient(135deg, #0071e3, #af52de)) !important;
+  box-shadow: var(--shadow-card-hover), 0 12px 32px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
-.showcase-card:hover {
-  transform: translateY(-4px) scale(1.008);
-  background: var(--bg-card-hover);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--border-glass);
+/* On hover/selected: adjust internal typography & badges for clean legibility */
+.showcase-card:hover .card-title,
+.showcase-card.is-selected .card-title {
+  color: #ffffff !important;
 }
 
-.showcase-card:hover::before {
-  height: 4px;
+.showcase-card:hover .card-tagline,
+.showcase-card.is-selected .card-tagline,
+.showcase-card:hover .card-desc,
+.showcase-card.is-selected .card-desc {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.showcase-card:hover .card-seq-badge,
+.showcase-card.is-selected .card-seq-badge {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.showcase-card:hover .card-cat-badge,
+.showcase-card.is-selected .card-cat-badge {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.showcase-card:hover .card-highlights,
+.showcase-card.is-selected .card-highlights {
+  background: rgba(0, 0, 0, 0.16);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.showcase-card:hover .card-highlights li,
+.showcase-card.is-selected .card-highlights li {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.showcase-card:hover .card-highlights li i,
+.showcase-card.is-selected .card-highlights li i {
+  color: #ffffff;
+}
+
+.showcase-card:hover .tech-badge,
+.showcase-card.is-selected .tech-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.showcase-card:hover .card-footer,
+.showcase-card.is-selected .card-footer {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.showcase-card:hover .btn-card-launch,
+.showcase-card.is-selected .btn-card-launch {
+  background: #ffffff;
+  color: #1d1d1f;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.showcase-card:hover .btn-card-detail,
+.showcase-card.is-selected .btn-card-detail {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Card Header */
@@ -629,8 +682,10 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   transition: transform var(--spring-snappy);
 }
 
-.showcase-card:hover .card-icon-box {
-  transform: scale(1.06);
+.showcase-card:hover .card-icon-box,
+.showcase-card.is-selected .card-icon-box {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .card-title-meta {
@@ -643,14 +698,16 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   font-weight: 600;
   color: var(--apple-blue);
   letter-spacing: -0.01em;
+  transition: color var(--spring-snappy);
 }
 
 .card-title {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.025em;
-  color: var(--text-primary);
+  color: #000000; /* Solid Black */
   line-height: 1.25;
+  transition: color var(--spring-snappy);
 }
 
 .card-tagline {

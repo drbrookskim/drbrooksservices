@@ -681,8 +681,20 @@
 
   // --- 11. Interactive Card Actions ---
   function attachCardEvents() {
+    document.querySelectorAll('.showcase-card').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        const isAlreadySelected = card.classList.contains('is-selected');
+        document.querySelectorAll('.showcase-card').forEach(c => c.classList.remove('is-selected'));
+        if (!isAlreadySelected) {
+          card.classList.add('is-selected');
+        }
+      });
+    });
+
     document.querySelectorAll('[data-action="detail"]').forEach((btn) => {
       btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const id = parseInt(e.currentTarget.dataset.id, 10);
         const service = allServices.find(s => s.id === id);
         if (service) openModal(service);
@@ -691,6 +703,7 @@
 
     document.querySelectorAll('[data-action="copy"]').forEach((btn) => {
       btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const url = e.currentTarget.dataset.url;
         copyToClipboard(url, '서비스 URL이 클립보드에 복사되었습니다.');
       });
