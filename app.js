@@ -386,19 +386,18 @@
   // --- 5. Theme Management ---
   function initTheme() {
     const savedTheme = localStorage.getItem('drbrooks-services-theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark'); // Default to dark for premium aesthetic
+    const initialTheme = savedTheme || 'light'; // Default to Black Glassmorphism
     
     document.documentElement.setAttribute('data-theme', initialTheme);
   }
 
   function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
     
     document.documentElement.setAttribute('data-theme', nextTheme);
     localStorage.setItem('drbrooks-services-theme', nextTheme);
-    showToast(`테마가 ${nextTheme === 'dark' ? '다크 모드' : '라이트 모드'}로 변경되었습니다.`, 'fa-solid fa-circle-half-stroke');
+    showToast(`테마가 ${nextTheme === 'dark' ? '화이트 글래스 모드' : '블랙 글래스 모드'}로 변경되었습니다.`, 'fa-solid fa-circle-half-stroke');
   }
 
   // --- 6. Data Loading ---
