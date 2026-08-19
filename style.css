@@ -5,9 +5,9 @@
 
 /* --- 1. Design Tokens & Color Palette --- */
 :root {
-  /* Apple Typography Stack */
-  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Pretendard", -apple-system, system-ui, sans-serif;
-  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  /* Typography Stack: English -> Inter, Korean -> Noto Sans KR */
+  --font-system: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Noto Sans KR', ui-monospace, Menlo, Consolas, monospace;
 
   /* Squircles & Radius */
   --radius-xs: 8px;
