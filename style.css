@@ -288,17 +288,11 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
 
 .hero-title {
   font-size: clamp(2.4rem, 5.5vw, 4rem);
-  font-weight: 700;
+  font-weight: 750;
   line-height: 1.08;
   letter-spacing: -0.035em; /* Negative tracking for large headings */
-  color: var(--text-primary);
+  color: #000000; /* Solid Black */
   margin-bottom: 16px;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #0071e3 0%, #af52de 50%, #ff2d55 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .hero-desc {
