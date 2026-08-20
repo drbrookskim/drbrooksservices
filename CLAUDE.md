@@ -2,7 +2,7 @@
 
 ## 하네스: drbrooks-services-hub
 
-**목표:** Dr. Brooks Kim이 제작한 12개 웹 서비스를 올림차순(1번~12번)으로 전시하는 고품질 인터랙티브 서비스 쇼케이스 포털 구축 및 운영
+**목표:** Dr. Brooks Kim이 제작한 12개 웹 서비스를 최신 역순(12번~1번)으로 전시하는 고품질 인터랙티브 서비스 쇼케이스 포털 구축 및 운영
 
 **트리거:** 서비스 추가/수정, 정렬/카테고리 변경, UI 테마/기능 업데이트 요청 시 `service-portal-orchestrator` 스킬을 사용하라. 단순 질문은 직접 응답 가능.
 
@@ -12,9 +12,9 @@
 
 **디자인 & 기술 스펙:**
 - Typography: 영문 `Inter`, 한글 `Noto Sans KR`, 고정폭 `JetBrains Mono`
-- Theme: 기본 **Black Glassmorphism** (`data-theme="light"` 기반 스모키 블랙 글래스), 다크모드 시 **White Glassmorphism** 지원
+- Theme: **다크/라이트 테마 최적화** (라이트 모드: 화사하고 선명한 Light Glassmorphism, 다크 모드: 깊이감 있는 딥 스페이스 Dark Glassmorphism)
 - Motion: Apple Fluid Interface Guidelines 기반 스프링 트랜지션 및 즉각적인 터치 피드백
-- Order: 1번 환율 NOW부터 12번 Dr. Brooks Money Report까지 올림차순 정렬
+- Order: 12번 Dr. Brooks Money Report부터 1번 환율 NOW까지 역순(최신순 내림차순) 정렬
 
 **변경 이력:**
 | 날짜 | 변경 내용 | 대상 | 사유 |
@@ -24,3 +24,4 @@
 | 2026-08-19 | GitHub 원격 저장소(`drbrooksservices.git`) 및 Cloudflare Pages(`drbrooks.pages.dev`) 연동 | 배포 인프라 | 실시간 웹 호스팅 및 자동 동기화 구축 |
 | 2026-08-20 | Apple Design & Fluid Interface System 적용, 상단 컬러바 제거 및 타일 그라데이션 전환 | `style.css`, `app.js` | 고급스러운 Apple Glassmorphism 인터랙션 강화 |
 | 2026-08-20 | 영문 Inter / 한글 Noto Sans KR 폰트 적용, 디폴트 Black Glassmorphism 테마 설정 | `index.html`, `style.css`, `app.js` | 최적의 가독성 및 디자인 아이덴티티 확립 |
+| 2026-08-20 | 12개 서비스 역순(12번~1번 최신순) 정렬 및 다크/라이트 테마 최적화 | `services.json`, `app.js`, `style.css`, `CLAUDE.md`, `README.md` | 사용자 요청: 최신순 정렬 및 다크/라이트 테마 가독성 & 명도 대비 극대화 |
