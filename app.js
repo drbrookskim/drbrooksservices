@@ -417,7 +417,7 @@
   // --- 6. Data Loading ---
   async function loadServicesData() {
     try {
-      const response = await fetch('services.json');
+      const response = await fetch('services.json?v=20260821_01');
       if (response.ok) {
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {
