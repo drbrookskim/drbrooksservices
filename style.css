@@ -178,8 +178,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  transform: translateZ(0);
-  contain: strict;
 }
 
 .glow-sphere {
@@ -188,8 +186,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   filter: blur(140px);
   opacity: 0.14;
   transition: opacity var(--spring-snappy);
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
 }
 
 [data-theme="dark"] .glow-sphere {
@@ -239,8 +235,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   -webkit-backdrop-filter: blur(28px) saturate(190%);
   border-bottom: 1px solid var(--border-divider);
   transition: background-color var(--spring-snappy), border-color var(--spring-snappy);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .header-container {
@@ -363,8 +357,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   border-top: 1px solid var(--border-divider);
   border-bottom: 1px solid var(--border-divider);
   padding: 10px 28px;
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .control-container {
@@ -551,8 +543,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   display: flex;
   flex-direction: column;
   padding-left: 64px;
-  content-visibility: auto;
-  contain-intrinsic-size: 0 340px;
 }
 
 @media (min-width: 900px) {
@@ -616,8 +606,8 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
    ========================================================================== */
 .showcase-card {
   background: var(--bg-card);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   padding: 26px;
@@ -628,7 +618,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transform: translateZ(0);
   transition: transform var(--spring-snappy), box-shadow var(--spring-snappy), background var(--spring-snappy), border-color var(--spring-snappy);
 }
 
@@ -902,11 +891,6 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-}
-
-.services-grid > .showcase-card {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 340px;
 }
 
 @media (min-width: 640px) {
