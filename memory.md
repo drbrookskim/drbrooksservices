@@ -54,6 +54,13 @@
 
 ## 4. 작업 세션 히스토리 (Work Log)
 
+### [2026-08-21] 브라우저 스크롤 성능 최적화 (크롬 60~120fps 부드러운 스크롤 확보)
+- **배경 앰비언트 글로우 GPU 격리:** `.ambient-glow` 및 `.glow-sphere`에 `transform: translateZ(0)`, `will-change: transform`, `contain: strict`를 적용하여 750px 거대 블러 연산의 리페인트 병목 해소.
+- **고정 헤더/필터 바 하드웨어 가속:** `.site-header`, `.control-section`에 `transform: translateZ(0)`와 `will-change: transform` 부여로 스크롤 합성 스레드 지연 제거.
+- **`content-visibility: auto` 적용:** 타임라인 및 그리드 카드 아이템에 뷰포트 밖 렌더링 스킵(`contain-intrinsic-size: 0 340px`)을 적용하여 크롬의 14중 백드롭 블러 오버드로우 완전 차단.
+- **카드 글래스모피즘 셰이더 경량화:** `.showcase-card`의 블러 반경 최적화 및 `transform: translateZ(0)` 컴포지팅 레이어 승격.
+- **캐시 버스팅 갱신:** `index.html` 내 `style.css?v=20260821_02` 버전 업데이트.
+
 ### [2026-08-21] 서비스 역순 정렬, 다크/라이트 테마 최적화 & Wrangler 즉각 배포
 - **서비스 역순 재배치:** `services.json` 및 `app.js` 내장 카탈로그를 Release #12부터 #01까지 역순 정렬하고 런타임 내림차순 정렬 로직 적용.
 - **다크/라이트 테마 리팩터링:** 라이트 모드(화이트 글래스 + 고대비 다크 텍스트) 및 다크 모드(다크 글래스 + 앰비언트 글로우)의 시각적 명도 대비와 가독성 극대화.
