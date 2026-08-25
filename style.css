@@ -746,81 +746,59 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
 .showcase-card:hover::before,
 .showcase-card.is-selected::before {
   width: 100%;
-  box-shadow: 0 0 12px var(--card-color, var(--apple-blue));
+  box-shadow: 0 0 14px var(--card-color, var(--apple-blue));
 }
 
 .showcase-card:hover::after,
 .showcase-card.is-selected::after {
-  opacity: 0.95;
-  transform: scale(1.05);
+  opacity: 0.85;
+  transform: scale(1.04);
 }
 
-/* On hover/selected: adjust internal typography & badges with smooth transitions */
+/* Theme-Aware Hover Typography: Preserve contrast in both Light & Dark modes */
 .showcase-card:hover .card-title,
 .showcase-card.is-selected .card-title {
-  color: #ffffff !important;
+  color: var(--card-text-title);
 }
 
 .showcase-card:hover .card-tagline,
-.showcase-card.is-selected .card-tagline,
+.showcase-card.is-selected .card-tagline {
+  color: var(--card-text-muted);
+}
+
 .showcase-card:hover .card-desc,
 .showcase-card.is-selected .card-desc {
-  color: rgba(255, 255, 255, 0.94) !important;
-}
-
-.showcase-card:hover .card-seq-badge,
-.showcase-card.is-selected .card-seq-badge {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.showcase-card:hover .card-cat-badge,
-.showcase-card.is-selected .card-cat-badge {
-  background: rgba(255, 255, 255, 0.22) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
+  color: var(--card-text-desc);
 }
 
 .showcase-card:hover .card-highlights,
 .showcase-card.is-selected .card-highlights {
-  background: rgba(0, 0, 0, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-}
-
-.showcase-card:hover .card-highlights li,
-.showcase-card.is-selected .card-highlights li {
-  color: rgba(255, 255, 255, 0.95) !important;
-}
-
-.showcase-card:hover .card-highlights li i,
-.showcase-card.is-selected .card-highlights li i {
-  color: #ffffff !important;
+  border-color: color-mix(in srgb, var(--card-color, var(--apple-blue)) 30%, var(--card-border-subtle));
+  background: color-mix(in srgb, var(--card-color, var(--apple-blue)) 6%, var(--card-bg-subtle));
 }
 
 .showcase-card:hover .tech-badge,
 .showcase-card.is-selected .tech-badge {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  color: #ffffff !important;
-}
-
-.showcase-card:hover .card-footer,
-.showcase-card.is-selected .card-footer {
-  border-top-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: color-mix(in srgb, var(--card-color, var(--apple-blue)) 35%, var(--card-border-subtle));
+  background: color-mix(in srgb, var(--card-color, var(--apple-blue)) 10%, var(--card-bg-pill));
+  color: var(--card-text-title);
 }
 
 .showcase-card:hover .btn-card-launch,
 .showcase-card.is-selected .btn-card-launch {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  font-weight: 700;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--card-color, var(--apple-blue)) 45%, transparent);
 }
 
 .showcase-card:hover .btn-card-detail,
 .showcase-card.is-selected .btn-card-detail {
-  background: rgba(255, 255, 255, 0.24) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
+  border-color: color-mix(in srgb, var(--card-color, var(--apple-blue)) 35%, var(--border-subtle));
+  color: var(--card-color, var(--apple-blue));
+}
+
+[data-theme="dark"] .showcase-card:hover .card-title,
+[data-theme="dark"] .showcase-card.is-selected .card-title {
+  color: #ffffff;
 }
 
 /* Card Header */
