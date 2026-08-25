@@ -659,7 +659,7 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
 }
 
 /* ==========================================================================
-   11. GLASSMORPHISM CARDS — GRADIENT SYSTEM & SLOW MOTION
+   11. GLASSMORPHISM CARDS — STAGE-01 INSPIRED GRADIENT & ANIMATIONS
    ========================================================================== */
 .showcase-card {
   background: var(--bg-card);
@@ -676,43 +676,40 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  /* Cinematic slow & gentle transitions */
-  transition: transform var(--spring-slow),
-              box-shadow var(--spring-slow),
-              border-color var(--spring-slow);
+  /* Cinematic gentle transitions */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 1. Card Top Animated Gradient Accent Bar */
+/* 1. Stage-Style Dynamic Top Accent Bar (Starts compact at 42px, expands to 100% on hover) */
 .showcase-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--card-gradient, linear-gradient(135deg, #0071e3 0%, #af52de 100%));
-  background-size: 200% 200%;
-  animation: cardGradientFlow 12s ease-in-out infinite alternate;
+  width: 42px;
+  height: 3.5px;
+  background: var(--card-color, var(--apple-blue));
+  border-radius: 2px;
   z-index: 2;
-  transition: height var(--spring-slow), opacity var(--spring-slow);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
 
-/* 2. Card Background Gradient Tint & Slow Flowing Ambient Aurora */
+/* 2. Stage-Style Ambient Breathing & Dynamic Color-Matched Gradient Fill Layer */
 .showcase-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--card-gradient, linear-gradient(135deg, #0071e3 0%, #af52de 100%));
-  background-size: 200% 200%;
-  opacity: 0.09;
+  background: radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--card-color, var(--apple-blue)) 26%, transparent) 0%, transparent 75%),
+              linear-gradient(135deg, transparent 0%, color-mix(in srgb, var(--card-color, var(--apple-blue)) 20%, transparent) 100%);
+  opacity: 0.22;
   z-index: 0;
   pointer-events: none;
-  animation: cardGradientFlow 14s ease-in-out infinite alternate;
-  transition: opacity var(--spring-slow), transform var(--spring-slow);
+  animation: tileGradientBreath 6s ease-in-out infinite alternate;
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] .showcase-card::after {
-  opacity: 0.16;
+  opacity: 0.30;
 }
 
 /* Elevate card children above background gradient layer */
@@ -721,38 +718,44 @@ button:active, .filter-tab:active, .btn-card-launch:active, .btn-card-detail:act
   z-index: 1;
 }
 
-/* Smooth ambient gradient flow keyframes */
-@keyframes cardGradientFlow {
+/* Smooth ambient gradient breathing keyframes */
+@keyframes tileGradientBreath {
   0% {
-    background-position: 0% 50%;
+    opacity: 0.18;
+    transform: scale(0.98);
   }
   50% {
-    background-position: 100% 50%;
+    opacity: 0.34;
+    transform: scale(1.02);
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 0.18;
+    transform: scale(0.98);
   }
 }
 
-/* Hover & Selected State: Card smoothly transforms into vibrant service gradient */
+/* Hover & Selected State: Stage-Style full flood expansion & neon glow */
 .showcase-card:hover,
 .showcase-card.is-selected {
+  border-color: var(--card-color, var(--apple-blue));
   transform: translateY(-6px) scale(1.015);
-  box-shadow: var(--shadow-card-hover), 0 16px 38px rgba(0, 0, 0, 0.32);
-  border-color: rgba(255, 255, 255, 0.48);
-}
-
-.showcase-card:hover::after,
-.showcase-card.is-selected::after {
-  opacity: 0.98;
+  box-shadow: 0 18px 40px -8px color-mix(in srgb, var(--card-color, var(--apple-blue)) 38%, transparent),
+              0 0 22px -4px color-mix(in srgb, var(--card-color, var(--apple-blue)) 24%, transparent);
 }
 
 .showcase-card:hover::before,
 .showcase-card.is-selected::before {
-  height: 6px;
+  width: 100%;
+  box-shadow: 0 0 12px var(--card-color, var(--apple-blue));
 }
 
-/* On hover/selected: adjust internal typography & badges with smooth slow transitions */
+.showcase-card:hover::after,
+.showcase-card.is-selected::after {
+  opacity: 0.95;
+  transform: scale(1.05);
+}
+
+/* On hover/selected: adjust internal typography & badges with smooth transitions */
 .showcase-card:hover .card-title,
 .showcase-card.is-selected .card-title {
   color: #ffffff !important;

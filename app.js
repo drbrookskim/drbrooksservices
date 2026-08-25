@@ -606,7 +606,7 @@
     return `
       <div class="timeline-item" data-id="${service.id}">
         <div class="timeline-node">${orderStr}</div>
-        <div class="showcase-card" style="--card-gradient: ${service.gradient};">
+        <div class="showcase-card" style="--card-color: ${service.themeColor}; --card-gradient: ${service.gradient};">
           <div class="card-header">
             <div class="card-identity">
               <div class="card-icon-box" style="background: ${service.gradient};">
@@ -651,7 +651,7 @@
   function createGridCardHTML(service) {
     const orderStr = String(service.order).padStart(2, '0');
     return `
-      <div class="showcase-card" style="--card-gradient: ${service.gradient};" data-id="${service.id}">
+      <div class="showcase-card" style="--card-color: ${service.themeColor}; --card-gradient: ${service.gradient};" data-id="${service.id}">
         <div class="card-header">
           <div class="card-identity">
             <div class="card-icon-box" style="background: ${service.gradient};">
