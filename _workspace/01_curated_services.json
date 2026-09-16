@@ -322,5 +322,32 @@
     "badge": "Release #12",
     "order": 12,
     "year": "2026"
+  },
+  {
+    "id": 13,
+    "slug": "epochwave",
+    "title": "EpochWave",
+    "titleEn": "EpochWave",
+    "tagline": "1955 → 2026 역사와 시장의 파동 인터랙티브 아카이브",
+    "taglineEn": "1955 → 2026 History & Market Wave Interactive Archive",
+    "description": "영화 〈백 투 더 퓨처〉 콘셉트로 1955년부터 2026년까지 70년간의 한국사·세계사 48개 대사건과 한·미 4대 증시(코스피·코스닥·나스닥·다우)의 궤적을 레트로 퓨처리즘 타임서킷으로 탐색하는 인터랙티브 시계열 아카이브입니다.",
+    "url": "https://epochwave.pages.dev/",
+    "domain": "epochwave.pages.dev",
+    "category": "market",
+    "categoryLabel": "역사 & 시장 파동",
+    "categoryEn": "History & Market Waves",
+    "tags": ["History & Market", "70-Year Timeline", "4 Major Indices", "Cloudflare Pages", "Back to the Future"],
+    "techStack": ["Cloudflare Pages", "Cloudflare Workers", "Retro Futurism UI", "Interactive Canvas Chart", "Time Circuits"],
+    "highlights": [
+      "1955~2026년 70년 한국사·세계사 48대 사건과 증시 맥락 연결",
+      "코스피 · 코스닥 · 나스닥 · 다우 4대 증시 공식 시계열 데이터",
+      "영화 〈백 투 더 퓨처〉 레트로 퓨처리즘 타임서킷 UI 인터랙션"
+    ],
+    "themeColor": "#f97316",
+    "gradient": "linear-gradient(135deg, #ff8c00 0%, #ea580c 50%, #dc2626 100%)",
+    "icon": "fa-solid fa-clock-rotate-left",
+    "badge": "Release #13",
+    "order": 13,
+    "year": "2026"
   }
 ]

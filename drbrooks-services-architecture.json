@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Dr. Brooks Services Hub Architecture",
+    "output": "drbrooks-services-architecture.html",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "portal-interaction",
+        "label": "User Portal Interaction",
+        "focus": [
+          "users",
+          "portal_shell",
+          "view_engine",
+          "modal_viewer",
+          "theme_storage"
+        ],
+        "note": "Users navigate dual view modes, apply category filters, inspect modal metadata, and toggle theme settings."
+      },
+      {
+        "id": "ecosystem-launch",
+        "label": "Ecosystem Hub & Launch",
+        "focus": [
+          "view_engine",
+          "services_catalog",
+          "qa_pipeline",
+          "live_ecosystem"
+        ],
+        "note": "Curated and validated services catalog dispatches direct entry points to 13 distributed cloud web apps."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "users",
+      "type": "external",
+      "label": "Global Visitors",
+      "sublabel": "Desktop / Mobile Web",
+      "pos": [
+        40,
+        240
+      ],
+      "size": [
+        130,
+        60
+      ]
+    },
+    {
+      "id": "portal_shell",
+      "type": "frontend",
+      "label": "Hub Portal Shell",
+      "sublabel": "index.html & style.css",
+      "pos": [
+        240,
+        240
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "tag": "Glassmorphism"
+    },
+    {
+      "id": "view_engine",
+      "type": "frontend",
+      "label": "Dual View Engine",
+      "sublabel": "Timeline & Card Grid",
+      "pos": [
+        450,
+        240
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "tag": "Filter & Search"
+    },
+    {
+      "id": "modal_viewer",
+      "type": "frontend",
+      "label": "Detail Modal Viewer",
+      "sublabel": "App Previews & Meta",
+      "pos": [
+        450,
+        90
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "tag": "Deep Dive"
+    },
+    {
+      "id": "theme_storage",
+      "type": "database",
+      "label": "Preferences Store",
+      "sublabel": "Theme & Filter Cache",
+      "pos": [
+        450,
+        390
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "tag": "LocalStorage"
+    },
+    {
+      "id": "services_catalog",
+      "type": "database",
+      "label": "Services Catalog",
+      "sublabel": "services.json (13 Apps)",
+      "pos": [
+        680,
+        240
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "tag": "Curated Master"
+    },
+    {
+      "id": "qa_pipeline",
+      "type": "backend",
+      "label": "Ingestion & QA Suite",
+      "sublabel": "_workspace/ Audits",
+      "pos": [
+        680,
+        90
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "tag": "Auto Verify"
+    },
+    {
+      "id": "live_ecosystem",
+      "type": "cloud",
+      "label": "13 Live Services",
+      "sublabel": "Pages / Vercel / GitHub",
+      "pos": [
+        910,
+        240
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "brand": "github",
+      "tag": "Cloud Apps"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Client Portal Runtime (SPA)",
+      "wraps": [
+        "portal_shell",
+        "view_engine",
+        "modal_viewer",
+        "theme_storage"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Catalog & QA Governance",
+      "wraps": [
+        "services_catalog",
+        "qa_pipeline"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Distributed Cloud Deployments",
+      "wraps": [
+        "live_ecosystem"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "users-to-shell",
+      "from": "users",
+      "to": "portal_shell",
+      "label": "HTTPS",
+      "variant": "emphasis"
+    },
+    {
+      "id": "shell-to-engine",
+      "from": "portal_shell",
+      "to": "view_engine",
+      "label": "Browse"
+    },
+    {
+      "id": "engine-to-modal",
+      "from": "view_engine",
+      "to": "modal_viewer",
+      "label": "Inspect",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDy": -48
+    },
+    {
+      "id": "engine-to-theme",
+      "from": "view_engine",
+      "to": "theme_storage",
+      "label": "Persist",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 48
+    },
+    {
+      "id": "engine-to-catalog",
+      "from": "view_engine",
+      "to": "services_catalog",
+      "label": "Fetch 13 Apps",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "qa-to-catalog",
+      "from": "qa_pipeline",
+      "to": "services_catalog",
+      "label": "Validate",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 48
+    },
+    {
+      "id": "catalog-to-live",
+      "from": "services_catalog",
+      "to": "live_ecosystem",
+      "label": "Launch URL",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Client Portal Experience",
+      "items": [
+        "Responsive Glassmorphism design tokens and hairline layout",
+        "Seamless toggle between chronological timeline and 3-column card grid",
+        "Interactive full-screen preview modals with live links and tech stacks"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Catalog & QA Governance",
+      "items": [
+        "Structured services.json catalog tracking release history (#01 to #13)",
+        "Category classification: Finance, AI/NLP, Knowledge, Productivity",
+        "Automated QA verification scripts ensuring link health and metadata integrity"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Distributed Multi-Cloud Ecosystem",
+      "items": [
+        "Static SPA hosted on GitHub Pages with zero server overhead",
+        "Cross-linking across Vercel, Cloudflare Pages, and GitHub Pages deployments",
+        "Zero-flicker dark/light mode with client-side LocalStorage state persistence"
+      ]
+    }
+  ]
+}

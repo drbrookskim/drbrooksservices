@@ -7,7 +7,7 @@
 
 ---
 
-## 1. 12개 서비스 올림차순 정렬 및 링크 전수 검증
+## 1. 13개 서비스 정렬 및 링크 전수 검증
 
 | # | 서비스명 | 배포 도메인 / URL | 카테고리 | 순서 일치 | 링크 도달성 |
 |---|---|---|---|:---:|:---:|
@@ -23,6 +23,7 @@
 | **10** | Chart Deep Dive | `https://chartdeepdive.vercel.app/` | 차트 기술적 분석 | PASS (#10) | 정상 확인 |
 | **11** | NOSTOS: Buy the Dip | `https://drbrookskim.github.io/buythedip/` | 전략 시뮬레이션 | PASS (#11) | 정상 확인 |
 | **12** | Dr. Brooks Money Report | `https://drbrooks-moneyreport.pages.dev/` | 산업 리포트 아카이브 | PASS (#12) | 정상 확인 |
+| **13** | EpochWave | `https://epochwave.pages.dev/` | 역사 & 시장 파동 | PASS (#13) | 정상 확인 |
 
 ---
 
@@ -46,4 +47,4 @@
 ---
 
 ## 3. 종합 판정
-**Ready for Production**: 12개 서비스의 올림차순 정렬 및 쇼케이스 허브 웹사이트 구현이 완료되었으며 배포 가능한 상태입니다.
+**Ready for Production**: 13개 서비스의 정렬 및 쇼케이스 허브 웹사이트 구현이 완료되었으며 배포 가능한 상태입니다.

@@ -6,7 +6,7 @@
 
 ## 1. 프로젝트 개요 (Project Summary)
 - **프로젝트명:** Dr. Brooks Services Hub
-- **목적:** Dr. Brooks Kim이 개발한 12개 웹 애플리케이션 및 서비스를 모던하고 인터랙티브한 UI(타임라인 뷰 및 그리드 뷰)로 제공하는 포털
+- **목적:** Dr. Brooks Kim이 개발한 13개 웹 애플리케이션 및 서비스를 모던하고 인터랙티브한 UI(타임라인 뷰 및 그리드 뷰)로 제공하는 포털
 - **호스팅 및 인프라:**
   - **GitHub 저장소:** [`https://github.com/drbrookskim/drbrooksservices.git`](https://github.com/drbrookskim/drbrooksservices.git)
   - **Cloudflare Pages:** [https://drbrooks.pages.dev/](https://drbrooks.pages.dev/)
@@ -14,22 +14,23 @@
 
 ---
 
-## 2. 12개 서비스 목록 (최신 역순 정렬: #12 → #01)
+## 2. 13개 서비스 목록 (최신 역순 정렬: #13 → #01)
 
 | 순번 | ID | 서비스명 | 카테고리 | 주요 기술 스택 | 배포 URL |
 |:---:|:---:|:---|:---|:---|:---|
-| 1 | **#12** | **Dr. Brooks Money Report** | 산업 리포트 아카이브 | Cloudflare Pages, GitHub API, HTML Signal Viewer | [`drbrooks-moneyreport.pages.dev`](https://drbrooks-moneyreport.pages.dev/) |
-| 2 | **#11** | **NOSTOS: Buy the Dip** | 전략 시뮬레이션 | Chart.js, Chart.js Zoom, FontAwesome 6 | [`drbrookskim.github.io/buythedip`](https://drbrookskim.github.io/buythedip/) |
-| 3 | **#10** | **Chart Deep Dive** | 차트 기술적 분석 | Next.js 14, Turbopack, Canvas Chart | [`chartdeepdive.vercel.app`](https://chartdeepdive.vercel.app/) |
-| 4 | **#09** | **NELCOME.md (SkillBoard)** | 에이전트 스킬 & 툴킷 | JSZip, Space Grotesk, Vanilla JS | [`drbrookskim.github.io/skillboard`](https://drbrookskim.github.io/skillboard/) |
-| 5 | **#08** | **gitmark** | 개발자 툴 & 북마크 | PWA, Supabase JS, Tabler Icons | [`drbrookskim.github.io/gitmark`](https://drbrookskim.github.io/gitmark/) |
-| 6 | **#07** | **PITL** | 기획 & 생산성 | Starbucks Design System, Marked.js | [`drbrookskim.github.io/pitl`](https://drbrookskim.github.io/pitl/) |
-| 7 | **#06** | **Signnith News Finder** | AI 뉴스 & 검색 | Vite, ES Modules, AI Integration | [`drbrookskim.github.io/newsfinder`](https://drbrookskim.github.io/newsfinder/) |
-| 8 | **#05** | **Dr. Brooks Thoughts** | 지식 그래프 & 아카이브 | Vis.js Network, Marked.js, Canvas Particles | [`drbrookskim.github.io/thoughts`](https://drbrookskim.github.io/thoughts/) |
-| 9 | **#04** | **EquiSense** | 주식 심층 분석 | Next.js, Turbopack, Tailwind CSS | [`drbrookskim.github.io/equisense`](https://drbrookskim.github.io/equisense/) |
-| 10 | **#03** | **SIGNNITH** | 시장 인텔리전스 | Supabase, Chart.js, D3.js | [`drbrookskim.github.io/signnith`](https://drbrookskim.github.io/signnith/) |
-| 11 | **#02** | **오늘의 위스키** | 라이프스타일 & AI | React 18, Tailwind CSS, Lucide Icons | [`drbrookskim.github.io/todayswhisky`](https://drbrookskim.github.io/todayswhisky/) |
-| 12 | **#01** | **환율 NOW** | 금융 & 통화 | JavaScript, Chart.js, PWA | [`drbrookskim.github.io/exchangenow`](https://drbrookskim.github.io/exchangenow/) |
+| 1 | **#13** | **EpochWave** | 역사 & 시장 파동 | Cloudflare Pages/Workers, Time Circuits, Canvas Chart | [`epochwave.pages.dev`](https://epochwave.pages.dev/) |
+| 2 | **#12** | **Dr. Brooks Money Report** | 산업 리포트 아카이브 | Cloudflare Pages, GitHub API, HTML Signal Viewer | [`drbrooks-moneyreport.pages.dev`](https://drbrooks-moneyreport.pages.dev/) |
+| 3 | **#11** | **NOSTOS: Buy the Dip** | 전략 시뮬레이션 | Chart.js, Chart.js Zoom, FontAwesome 6 | [`drbrookskim.github.io/buythedip`](https://drbrookskim.github.io/buythedip/) |
+| 4 | **#10** | **Chart Deep Dive** | 차트 기술적 분석 | Next.js 14, Turbopack, Canvas Chart | [`chartdeepdive.vercel.app`](https://chartdeepdive.vercel.app/) |
+| 5 | **#09** | **NELCOME.md (SkillBoard)** | 에이전트 스킬 & 툴킷 | JSZip, Space Grotesk, Vanilla JS | [`drbrookskim.github.io/skillboard`](https://drbrookskim.github.io/skillboard/) |
+| 6 | **#08** | **gitmark** | 개발자 툴 & 북마크 | PWA, Supabase JS, Tabler Icons | [`drbrookskim.github.io/gitmark`](https://drbrookskim.github.io/gitmark/) |
+| 7 | **#07** | **PITL** | 기획 & 생산성 | Starbucks Design System, Marked.js | [`drbrookskim.github.io/pitl`](https://drbrookskim.github.io/pitl/) |
+| 8 | **#06** | **Signnith News Finder** | AI 뉴스 & 검색 | Vite, ES Modules, AI Integration | [`drbrookskim.github.io/newsfinder`](https://drbrookskim.github.io/newsfinder/) |
+| 9 | **#05** | **Dr. Brooks Thoughts** | 지식 그래프 & 아카이브 | Vis.js Network, Marked.js, Canvas Particles | [`drbrookskim.github.io/thoughts`](https://drbrookskim.github.io/thoughts/) |
+| 10 | **#04** | **EquiSense** | 주식 심층 분석 | Next.js, Turbopack, Tailwind CSS | [`drbrookskim.github.io/equisense`](https://drbrookskim.github.io/equisense/) |
+| 11 | **#03** | **SIGNNITH** | 시장 인텔리전스 | Supabase, Chart.js, D3.js | [`drbrookskim.github.io/signnith`](https://drbrookskim.github.io/signnith/) |
+| 12 | **#02** | **오늘의 위스키** | 라이프스타일 & AI | React 18, Tailwind CSS, Lucide Icons | [`drbrookskim.github.io/todayswhisky`](https://drbrookskim.github.io/todayswhisky/) |
+| 13 | **#01** | **환율 NOW** | 금융 & 통화 | JavaScript, Chart.js, PWA | [`drbrookskim.github.io/exchangenow`](https://drbrookskim.github.io/exchangenow/) |
 
 ---
 
@@ -53,6 +54,18 @@
 ---
 
 ## 4. 작업 세션 히스토리 (Work Log)
+
+### [2026-09-16] 13번째 서비스 EpochWave (에포크웨이브) 허브 신규 연동 & 전방위 동기화
+- **EpochWave (#13) 카탈로그 데이터셋 추가:**
+  - `services.json`, `app.js`(임베디드 폴백 `DEFAULT_SERVICES`), `_workspace/01_curated_services.json`에 Release #13 신규 추가.
+  - 서비스 정보: `https://epochwave.pages.dev/`, 1955~2026년 70년간의 현대사 48개 대사건과 한·미 4대 증시(코스피·코스닥·나스닥·다우) 역사적 파동 시계열 아카이브.
+  - 테마 컬러 `#f97316` (타임서킷 앰비언트 오렌지/선셋 레드 그라데이션) 및 아이콘 `fa-solid fa-clock-rotate-left` 배정.
+- **포털 UI 및 필터 엔진 최적화:**
+  - `index.html` 초기 카운터 13개 갱신 및 캐시 버스팅 파라미터(`v=20260916_01`) 적용.
+  - `app.js`의 카테고리 필터링 엔진에서 `market`(시장/시그널), `stock`(주식/차트분석), `knowledge`(지식/아카이브) 전방위 탐색 지원.
+- **About 페이지 및 3D 우주 궤도 동기화:**
+  - `about.html`의 3D 행성 궤도 캔버스에 13번째 행성(`solar_chronos`) 및 HUD 툴팁 실시간 연동 완료.
+  - 에볼루션 단계 및 통계 지표(13 + ∞) 갱신.
 
 ### [2026-08-25] 'About Dr. Brooks Services' 버튼 연동, 타일별 앰비언트 그라데이션 & 슬로우 모션 구축
 - **상단 헤더 'About Dr. Brooks Services' 버튼 추가:**

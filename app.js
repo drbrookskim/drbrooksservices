@@ -9,6 +9,33 @@
   // --- 1. Built-in Fallback Data (Guarantees Instant Load via file:// or http://) ---
   const DEFAULT_SERVICES = [
     {
+      "id": 13,
+      "slug": "epochwave",
+      "title": "EpochWave",
+      "titleEn": "EpochWave",
+      "tagline": "1955 → 2026 역사와 시장의 파동 인터랙티브 아카이브",
+      "taglineEn": "1955 → 2026 History & Market Wave Interactive Archive",
+      "description": "영화 〈백 투 더 퓨처〉 콘셉트로 1955년부터 2026년까지 70년간의 한국사·세계사 48개 대사건과 한·미 4대 증시(코스피·코스닥·나스닥·다우)의 궤적을 레트로 퓨처리즘 타임서킷으로 탐색하는 인터랙티브 시계열 아카이브입니다.",
+      "url": "https://epochwave.pages.dev/",
+      "domain": "epochwave.pages.dev",
+      "category": "market",
+      "categoryLabel": "역사 & 시장 파동",
+      "categoryEn": "History & Market Waves",
+      "tags": ["History & Market", "70-Year Timeline", "4 Major Indices", "Cloudflare Pages", "Back to the Future"],
+      "techStack": ["Cloudflare Pages", "Cloudflare Workers", "Retro Futurism UI", "Interactive Canvas Chart", "Time Circuits"],
+      "highlights": [
+        "1955~2026년 70년 한국사·세계사 48대 사건과 증시 맥락 연결",
+        "코스피 · 코스닥 · 나스닥 · 다우 4대 증시 공식 시계열 데이터",
+        "영화 〈백 투 더 퓨처〉 레트로 퓨처리즘 타임서킷 UI 인터랙션"
+      ],
+      "themeColor": "#f97316",
+      "gradient": "linear-gradient(135deg, #ff8c00 0%, #ea580c 50%, #dc2626 100%)",
+      "icon": "fa-solid fa-clock-rotate-left",
+      "badge": "Release #13",
+      "order": 13,
+      "year": "2026"
+    },
+    {
       "id": 12,
       "slug": "moneyreport",
       "title": "Dr. Brooks Money Report",
@@ -417,7 +444,7 @@
   // --- 6. Data Loading ---
   async function loadServicesData() {
     try {
-      const response = await fetch('services.json?v=20260821_01');
+      const response = await fetch('services.json?v=20260916_01');
       if (response.ok) {
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {
@@ -428,7 +455,7 @@
       console.log('Using embedded service catalog fallback.');
     }
     
-    // Ensure Descending Reverse Order (#12 -> #01)
+    // Ensure Descending Reverse Order (#13 -> #01)
     allServices.sort((a, b) => b.order - a.order);
   }
 
@@ -541,15 +568,15 @@
         if (currentCategory === 'finance') {
           if (!['finance', 'trading', 'stock'].includes(service.category) && service.id !== 1) return false;
         } else if (currentCategory === 'stock') {
-          if (!['stock', 'trading'].includes(service.category)) return false;
+          if (!['stock', 'trading'].includes(service.category) && service.id !== 13) return false;
         } else if (currentCategory === 'market') {
-          if (!['market'].includes(service.category) && service.id !== 3 && service.id !== 12) return false;
+          if (!['market'].includes(service.category) && service.id !== 3 && service.id !== 12 && service.id !== 13) return false;
         } else if (currentCategory === 'ai') {
           if (!['ai'].includes(service.category) && service.id !== 6 && service.id !== 9) return false;
         } else if (currentCategory === 'productivity') {
           if (!['productivity', 'developer'].includes(service.category)) return false;
         } else if (currentCategory === 'knowledge') {
-          if (!['knowledge'].includes(service.category)) return false;
+          if (!['knowledge'].includes(service.category) && service.id !== 13) return false;
         } else if (currentCategory === 'lifestyle') {
           if (!['lifestyle'].includes(service.category)) return false;
         } else {
