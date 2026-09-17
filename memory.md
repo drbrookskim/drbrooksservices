@@ -19,7 +19,7 @@
 | 순번 | ID | 서비스명 | 카테고리 | 주요 기술 스택 | 배포 URL |
 |:---:|:---:|:---|:---|:---|:---|
 | 1 | **#13** | **EpochWave** | 역사 & 시장 파동 | Cloudflare Pages/Workers, Time Circuits, Canvas Chart | [`epochwave.pages.dev`](https://epochwave.pages.dev/) |
-| 2 | **#12** | **Dr. Brooks Money Report** | 산업 리포트 아카이브 | Cloudflare Pages, GitHub API, HTML Signal Viewer | [`drbrooks-moneyreport.pages.dev`](https://drbrooks-moneyreport.pages.dev/) |
+| 2 | **#12** | **Dr. Brooks Money & Knowledge Report** | 산업 리포트 아카이브 | Cloudflare Pages, GitHub API, HTML Signal Viewer | [`drbrooks-moneyreport.pages.dev`](https://drbrooks-moneyreport.pages.dev/) |
 | 3 | **#11** | **NOSTOS: Buy the Dip** | 전략 시뮬레이션 | Chart.js, Chart.js Zoom, FontAwesome 6 | [`drbrookskim.github.io/buythedip`](https://drbrookskim.github.io/buythedip/) |
 | 4 | **#10** | **Chart Deep Dive** | 차트 기술적 분석 | Next.js 14, Turbopack, Canvas Chart | [`chartdeepdive.vercel.app`](https://chartdeepdive.vercel.app/) |
 | 5 | **#09** | **NELCOME.md (SkillBoard)** | 에이전트 스킬 & 툴킷 | JSZip, Space Grotesk, Vanilla JS | [`drbrookskim.github.io/skillboard`](https://drbrookskim.github.io/skillboard/) |
@@ -54,6 +54,16 @@
 ---
 
 ## 4. 작업 세션 히스토리 (Work Log)
+
+### [2026-09-17] Dr. Brooks Money & Knowledge Report (#12) 타이틀 변경 반영 및 포털 동기화
+- **서비스 타이틀 갱신:**
+  - `https://drbrooks-moneyreport.pages.dev/`의 실제 운영 변경사항에 맞춰 타이틀을 `Dr. Brooks Money Report`에서 `Dr. Brooks Money & Knowledge Report`로 전면 업데이트.
+  - `services.json`, `app.js`(`DEFAULT_SERVICES` 내장 폴백 포함), `_workspace/01_curated_services.json`, `_workspace/02_qa_verification_report.md` 동기화.
+- **포털 UI 및 소개 페이지 동기화:**
+  - `about.html`의 3D 진화 궤적 노드 #12 및 STAGE 03 설명 문구 최신화.
+  - `index.html` 및 `app.js` 캐시 버스팅 파라미터(`v=20260917_01`) 적용.
+- **문서 및 하네스 관리:**
+  - `README.md`, `CLAUDE.md`, `memory.md` 최신 서비스명 반영.
 
 ### [2026-09-16] 13번째 서비스 EpochWave (에포크웨이브) 허브 신규 연동 & 전방위 동기화
 - **EpochWave (#13) 카탈로그 데이터셋 추가:**

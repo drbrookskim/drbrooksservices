@@ -38,8 +38,8 @@
     {
       "id": 12,
       "slug": "moneyreport",
-      "title": "Dr. Brooks Money Report",
-      "titleEn": "Dr. Brooks Money Report",
+      "title": "Dr. Brooks Money & Knowledge Report",
+      "titleEn": "Dr. Brooks Money & Knowledge Report",
       "tagline": "산업 핵심 시그널 & 밸류체인 심층 분석 리포트 아카이브",
       "taglineEn": "Industry Signal & Value-Chain Deep Analysis Report Archive",
       "description": "거시경제, 산업 밸류체인, 핵심 투자 시그널을 심층 분석한 리포트를 HTML 형식으로 발행·관리하며 GitHub 동기화 및 즉각적인 열람을 제공하는 아카이브입니다.",
@@ -444,7 +444,7 @@
   // --- 6. Data Loading ---
   async function loadServicesData() {
     try {
-      const response = await fetch('services.json?v=20260916_01');
+      const response = await fetch('services.json?v=20260917_01');
       if (response.ok) {
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {

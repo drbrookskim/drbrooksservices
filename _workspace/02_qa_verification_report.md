@@ -22,7 +22,7 @@
 | **09** | NELCOME.md (SkillBoard) | `https://drbrookskim.github.io/skillboard/` | 에이전트 스킬 & 툴킷 | PASS (#09) | 정상 확인 |
 | **10** | Chart Deep Dive | `https://chartdeepdive.vercel.app/` | 차트 기술적 분석 | PASS (#10) | 정상 확인 |
 | **11** | NOSTOS: Buy the Dip | `https://drbrookskim.github.io/buythedip/` | 전략 시뮬레이션 | PASS (#11) | 정상 확인 |
-| **12** | Dr. Brooks Money Report | `https://drbrooks-moneyreport.pages.dev/` | 산업 리포트 아카이브 | PASS (#12) | 정상 확인 |
+| **12** | Dr. Brooks Money & Knowledge Report | `https://drbrooks-moneyreport.pages.dev/` | 산업 리포트 아카이브 | PASS (#12) | 정상 확인 |
 | **13** | EpochWave | `https://epochwave.pages.dev/` | 역사 & 시장 파동 | PASS (#13) | 정상 확인 |
 
 ---

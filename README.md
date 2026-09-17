@@ -5,7 +5,7 @@ Dr. Brooks Kim의 13개 인터랙티브 웹 애플리케이션 및 서비스 허
 ## 13개 서비스 목록 (최신 역순 정렬)
 
 1. **[EpochWave](https://epochwave.pages.dev/)** (#13) — 1955 → 2026 역사와 시장의 파동 인터랙티브 아카이브
-2. **[Dr. Brooks Money Report](https://drbrooks-moneyreport.pages.dev/)** (#12) — 산업 핵심 시그널 & 밸류체인 심층 분석 리포트 아카이브
+2. **[Dr. Brooks Money & Knowledge Report](https://drbrooks-moneyreport.pages.dev/)** (#12) — 산업 핵심 시그널 & 밸류체인 심층 분석 리포트 아카이브
 3. **[NOSTOS: Buy the Dip](https://drbrookskim.github.io/buythedip/)** (#11) — 눌림목 매수 & 다각적 매도 전략 AI 백테스팅 시뮬레이터
 4. **[Chart Deep Dive](https://chartdeepdive.vercel.app/)** (#10) — 종목 캔들 차트 기반 지표 · 패턴 · 고급 기법 심층 분석 엔진
 5. **[NELCOME.md (SkillBoard)](https://drbrookskim.github.io/skillboard/)** (#09) — AI 에이전트 스킬 & 프롬프트 커스터마이징 툴킷 대시보드

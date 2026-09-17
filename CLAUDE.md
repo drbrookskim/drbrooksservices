@@ -32,3 +32,4 @@
 | 2026-08-21 | 12개 서비스 역순(#12~#01) 정렬, 다크/라이트 테마 최적화 및 Wrangler 즉각 배포 | `services.json`, `app.js`, `style.css`, `index.html` | 사용자 요청: 최신순 정렬, 다크/라이트 테마 최적화, 캐시 버스팅 배포 |
 | 2026-08-21 | `memory.md` 생성 및 세션 종료 전 작업 기록 보존 규칙 수립 | `memory.md`, `CLAUDE.md` | 사용자 요청에 따른 세션별 작업 영구 보존 및 메모리 관리 |
 | 2026-09-16 | 13번째 서비스 EpochWave 신규 연동 & 전방위 동기화 | `services.json`, `app.js`, `index.html`, `about.html`, `README.md`, `memory.md` | 사용자 요청: https://epochwave.pages.dev/ 추가 |
+| 2026-09-17 | #12 Dr. Brooks Money & Knowledge Report 타이틀 변경 반영 | `services.json`, `app.js`, `about.html`, `README.md`, `memory.md` | 사용자 요청: 타이틀 변경 업데이트 |
